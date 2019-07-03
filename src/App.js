@@ -1,13 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Posts from './components/Posts'
+import PostFrom from './components/Postform'
+import {
+  Container,
+  Row
+} from 'reactstrap';
+
 
 function App() {
   return (
-    <div className="App">
-      <Posts />
-    </div>
+    <Container fluid className="p-5">
+      <Row>
+        <PostFrom />
+        <Posts />
+      </Row>
+    </Container>
   );
 }
 
