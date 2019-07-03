@@ -1,21 +1,27 @@
 import React from 'react';
 import './App.css';
-import Posts from './components/Posts'
-import PostFrom from './components/Postform'
+import { Provider } from 'react-redux';
+
 import {
   Container,
   Row
 } from 'reactstrap';
 
+import Posts from './components/Posts';
+import PostFrom from './components/Postform';
+import store from './store';
+
 
 function App() {
   return (
-    <Container fluid className="p-5">
-      <Row>
-        <PostFrom />
-        <Posts />
-      </Row>
-    </Container>
+    <Provider store={store}>
+      <Container fluid className="p-5">
+        <Row>
+          <PostFrom />
+          <Posts />
+        </Row>
+      </Container>
+    </Provider>
   );
 }
 
